@@ -22,10 +22,7 @@ import { Htag, Button, P, Tag, Rating } from "./components/page";
 
 export default function Home(): JSX.Element {
   const [count, setCount] = useState<number>(0);
-
-  useEffect(() => {
-    console.log("component mounted" + count);
-  }, []);
+  const [rating, setRating] = useState<number>(4);
 
   return (
     <>
@@ -62,7 +59,7 @@ export default function Home(): JSX.Element {
       <Tag size="m" color="primary">
         Primary
       </Tag>
-      <Rating rating={4} />
+      <Rating rating={4} isEditable setRating={setRating} />
     </>
   );
 }

@@ -2,7 +2,7 @@ import { ButtonProps } from "./Button.props";
 import styles from "./Button.module.scss";
 import cn from "classnames";
 import ArrowIcon from "./arrow.svg";
-// import vector from "./Vector.png";
+
 
 export const Button = ({
   appearance,
