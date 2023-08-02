@@ -3,7 +3,7 @@
 // import type { Metadata } from "next";
 
 import React from "react";
-import { Htag, Button } from "./components/page";
+import { Htag, Button, P } from "./components/page";
 // import Logo from "./../public/vercel.svg";
 
 // export const metadata: Metadata = {
@@ -19,7 +19,7 @@ import { Htag, Button } from "./components/page";
 //   };
 // }
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <>
       <Htag tag="h1">Text</Htag>
@@ -29,7 +29,9 @@ export default function Home() {
       <Button appearance="ghost" arrow="down">
         Knopka
       </Button>
-
+      <P size="s">Malenkiy</P>
+      <P size="m">Sredniy</P>
+      <P size="l">Bolshoy</P> 
     </>
   );
 }
