@@ -2,7 +2,7 @@
 // import styles from "./page.module.css";
 // import type { Metadata } from "next";
 "use client"
-import React, { useState } from "react";
+import React, { use, useState, useEffect } from "react";
 import { Htag, Button, P, Tag } from "./components/page";
 
 // import Logo from "./../public/vercel.svg";
@@ -22,6 +22,12 @@ import { Htag, Button, P, Tag } from "./components/page";
 
 export default function Home(): JSX.Element {
   const [count, setCount] = useState<number>(0);
+
+useEffect(() => {
+  console.log('component mounted'+ count)
+}, [])
+
+
   return (
     <>
       <Htag tag="h1">{count}</Htag>
