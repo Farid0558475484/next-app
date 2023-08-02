@@ -4,6 +4,7 @@
 
 import React from "react";
 import { Htag, Button } from "./components/page";
+// import Logo from "./../public/vercel.svg";
 
 // export const metadata: Metadata = {
 //   title: 'Create Next App',
@@ -22,8 +23,13 @@ export default function Home() {
   return (
     <>
       <Htag tag="h1">Text</Htag>
-      <Button appearance="primary">Knopka</Button>
-      <Button appearance="ghost">Knopka</Button>
+      <Button appearance="primary" arrow="right">
+        Knopka
+      </Button>
+      <Button appearance="ghost" arrow="down">
+        Knopka
+      </Button>
+
     </>
   );
 }
