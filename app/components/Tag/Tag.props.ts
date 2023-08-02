@@ -7,3 +7,4 @@ export interface TagProps
   color: "ghost" | "red" | "grey" | "green" | "primary";
   href?: string;
 }
+ 

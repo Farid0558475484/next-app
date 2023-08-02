@@ -1,9 +1,10 @@
 // import Image from "next/image";
 // import styles from "./page.module.css";
 // import type { Metadata } from "next";
-
-import React from "react";
+"use client"
+import React, { useState } from "react";
 import { Htag, Button, P, Tag } from "./components/page";
+
 // import Logo from "./../public/vercel.svg";
 
 // export const metadata: Metadata = {
@@ -20,13 +21,19 @@ import { Htag, Button, P, Tag } from "./components/page";
 // }
 
 export default function Home(): JSX.Element {
+  const [count, setCount] = useState<number>(0);
   return (
     <>
-      <Htag tag="h1">Text</Htag>
-      <Button appearance="primary" arrow="right">
+      <Htag tag="h1">{count}</Htag>
+      <Button
+        appearance="primary"
+        arrow="right"
+        onClick={() => setCount(x => x + 1)}
+      >
+ 
         Knopka
       </Button>
-      <Button appearance="ghost" arrow="down">
+      <Button appearance="ghost" arrow="down"         onClick={() => setCount(x => x - 1)}>
         Knopka
       </Button>
       <P size="s">Malenkiy</P>
